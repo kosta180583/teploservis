@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://teploservice.ru/sitemap.xml
+
+# Запрещаем индексацию служебных страниц
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
