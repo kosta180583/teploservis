@@ -1,5 +1,6 @@
 import type { NextRequest } from 'next/server'
 import { NextResponse } from 'next/server'
+
 const nodemailer = require('nodemailer')
 
 export const runtime = 'nodejs' // явно укажем node-рантайм
@@ -40,11 +41,10 @@ export async function POST(request: NextRequest) {
 			)
 		}
 
-		// Проверка env
 		const user = process.env.YANDEX_USER
 		const pass = process.env.YANDEX_PASS
 		const to = process.env.YANDEX_TO || process.env.YANDEX_USER
-		const siteName = process.env.SITE_NAME || 'Сайт'
+		const siteName = process.env.SITE_NAME || 'ТеплоСервис'
 
 		if (!user || !pass || !to) {
 			console.error('ENV error: YANDEX_USER/YANDEX_PASS/YANDEX_TO')
@@ -54,7 +54,6 @@ export async function POST(request: NextRequest) {
 			)
 		}
 
-		// Транспорт SMTP Яндекс
 		const transporter = nodemailer.createTransport({
 			host: 'smtp.yandex.ru',
 			port: 465,
@@ -103,7 +102,6 @@ Email: ${email}
 </div>
 `.trim()
 
-		// Отправляем
 		await transporter.sendMail({
 			from: `"${siteName}" <${user}>`, // должен совпадать с auth.user
 			to,
@@ -131,13 +129,13 @@ Email: ${email}
 function mapServiceType(code?: string) {
 	switch ((code || '').toLowerCase()) {
 		case 'installation':
-			return 'Установка системы'
+			return 'Установка системы отопления'
 		case 'maintenance':
-			return 'Обслуживание'
+			return 'Техническое обслуживание'
 		case 'repair':
-			return 'Ремонт'
+			return 'Ремонт системы отопления'
 		case 'consultation':
-			return 'Консультация'
+			return 'Консультация специалиста'
 		default:
 			return code || ''
 	}

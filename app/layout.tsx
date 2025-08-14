@@ -122,16 +122,16 @@ export default function RootLayout({
 							openingHours: ['Mo-Fr 08:00-20:00', 'Sa-Su 09:00-18:00'],
 							serviceArea: {
 								'@type': 'City',
-								name: 'Москва',
+								name: 'Белгород',
 							},
 							areaServed: [
 								{
 									'@type': 'City',
-									name: 'Москва',
+									name: 'Белгород',
 								},
 								{
 									'@type': 'State',
-									name: 'Московская область',
+									name: 'Белгородская область',
 								},
 							],
 							aggregateRating: {
