@@ -1,5 +1,6 @@
 import AdvantagesSection from '@/components/advantages-section'
-import ContactSection from '@/components/contact-section'
+
+import ContactTelegram from '@/components/contact-telegram'
 import Footer from '@/components/footer'
 import Header from '@/components/header'
 import HeroSection from '@/components/hero-section'
@@ -123,7 +124,7 @@ export default function HeatingLandingPage() {
 				<HeroSection />
 				<AdvantagesSection />
 				<ServicesSection />
-				<ContactSection />
+				<ContactTelegram />
 			</main>
 
 			<Footer />
