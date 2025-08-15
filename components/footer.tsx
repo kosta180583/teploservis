@@ -37,21 +37,21 @@ export default function Footer() {
 						<div className='space-y-4 text-gray-400 text-sm sm:text-base'>
 							<div className='flex items-center gap-3'>
 								<Phone className='h-5 w-5 text-blue-400 flex-shrink-0' />
-								<a
+								{/* <a
 									href='tel:+74951234567'
 									className='hover:text-white transition-colors'
 								>
 									+7 (495) 123-45-67
-								</a>
+								</a> */}
 							</div>
 							<div className='flex items-center gap-3'>
 								<Mail className='h-5 w-5 text-blue-400 flex-shrink-0' />
-								<a
+								{/* <a
 									href='mailto:info@teploservice.ru'
 									className='hover:text-white transition-colors'
 								>
 									info@teploservice.ru
-								</a>
+								</a> */}
 							</div>
 							<div className='flex items-start gap-3'>
 								<MapPin className='h-5 w-5 text-blue-400 flex-shrink-0 mt-0.5' />
