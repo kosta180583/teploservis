@@ -20,13 +20,14 @@ export default function HeroSection() {
 							Профессиональная установка и ремонт
 							<span className='text-blue-600 block sm:inline'>
 								{' '}
-								систем отопления в Москве
+								систем отопления в Белгороде
 							</span>
 						</h1>
 						<p className='text-base sm:text-lg lg:text-xl text-gray-600 mb-4 sm:mb-6 lg:mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0'>
-							Надежная установка котлов, радиаторов и теплых полов с гарантией
-							качества 5 лет. Экстренный ремонт 24/7, бесплатная консультация и
-							выезд мастера.
+							Надежная установка котлов, радиаторов и теплых полов в Белгороде с
+							гарантией качества 5 лет. Работаем во всех районах города:
+							Центральный, Восточный, Западный. Экстренный ремонт 24/7,
+							бесплатная консультация и выезд мастера по Белгороду и области.
 						</p>
 						<div className='flex flex-col sm:flex-row gap-3 sm:gap-4 mb-4 sm:mb-6 lg:mb-8 justify-center lg:justify-start'>
 							<Button
@@ -49,10 +50,10 @@ export default function HeroSection() {
 						<div className='grid grid-cols-3 gap-2 sm:gap-4 lg:gap-6 pt-4 sm:pt-6 lg:pt-8 border-t border-gray-200 max-w-sm sm:max-w-md mx-auto lg:max-w-none lg:mx-0'>
 							<div className='text-center'>
 								<div className='text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 mb-1'>
-									500+
+									800+
 								</div>
 								<div className='text-xs sm:text-sm text-gray-600 leading-tight'>
-									Довольных клиентов
+									Довольных клиентов в Белгороде
 								</div>
 							</div>
 							<div className='text-center'>

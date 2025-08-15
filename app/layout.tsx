@@ -108,16 +108,11 @@ export default function RootLayout({
 							currenciesAccepted: 'RUB',
 							address: {
 								'@type': 'PostalAddress',
-								streetAddress: 'ул. Примерная, 123',
-								addressLocality: 'Москва',
-								addressRegion: 'Московская область',
+								streetAddress: 'ул. Щорса, 12',
+								addressLocality: 'Белгород',
+								addressRegion: 'Белгородская область',
 								postalCode: '123456',
 								addressCountry: 'RU',
-							},
-							geo: {
-								'@type': 'GeoCoordinates',
-								latitude: '55.7558',
-								longitude: '37.6176',
 							},
 							openingHours: ['Mo-Fr 08:00-20:00', 'Sa-Su 09:00-18:00'],
 							serviceArea: {

@@ -152,11 +152,11 @@ export default function ContactSection() {
 				<div className='max-w-2xl mx-auto'>
 					<div className='text-center mb-6 sm:mb-8 lg:mb-12'>
 						<h2 className='text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold font-heading text-gray-900 mb-3 sm:mb-4 leading-tight break-words px-2'>
-							Заказать установку системы отопления
+							Заказать установку системы отопления в Белгороде
 						</h2>
 						<p className='text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed px-2'>
-							Бесплатная консультация и расчет стоимости. Заполните форму заявки
-							на отопление
+							Бесплатная консультация и расчет стоимости в Белгороде. Выезд
+							мастера во все районы города. Заполните форму заявки на отопление.
 						</p>
 					</div>
 
@@ -171,7 +171,8 @@ export default function ContactSection() {
 										Спасибо за заявку!
 									</h3>
 									<p className='text-gray-600 text-sm sm:text-base lg:text-lg break-words'>
-										Мы свяжемся с вами в ближайшее время для уточнения деталей.
+										Наш мастер свяжется с вами в ближайшее время и приедет в
+										удобное время по Белгороду.
 									</p>
 								</div>
 							) : (
@@ -221,7 +222,7 @@ export default function ContactSection() {
 												className={`w-full focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-sm sm:text-base ${
 													formErrors.phone ? 'border-red-500' : ''
 												}`}
-												placeholder='+7 (999) 123-45-67'
+												placeholder='+7 (4722) 12-34-56'
 											/>
 											{formErrors.phone && (
 												<p className='text-red-500 text-xs sm:text-sm break-words'>
@@ -318,7 +319,7 @@ export default function ContactSection() {
 												handleInputChange('message', e.target.value)
 											}
 											rows={3}
-											placeholder='Расскажите подробнее о ваших потребностях...'
+											placeholder='Укажите район Белгорода, тип дома и ваши потребности в отоплении...'
 											className='w-full focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none text-sm sm:text-base'
 										/>
 									</div>
