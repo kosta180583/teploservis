@@ -147,30 +147,30 @@ export default function ContactSection() {
 	)
 
 	return (
-		<section id='contact' className='py-12 sm:py-16 lg:py-20 bg-white'>
-			<div className='container mx-auto px-4'>
+		<section id='contact' className='py-8 sm:py-12 lg:py-16 xl:py-20 bg-white'>
+			<div className='container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl'>
 				<div className='max-w-2xl mx-auto'>
-					<div className='text-center mb-8 sm:mb-12'>
-						<h2 className='text-2xl sm:text-3xl lg:text-4xl font-bold font-heading text-gray-900 mb-4'>
+					<div className='text-center mb-6 sm:mb-8 lg:mb-12'>
+						<h2 className='text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold font-heading text-gray-900 mb-3 sm:mb-4 leading-tight break-words px-2'>
 							Заказать установку системы отопления
 						</h2>
-						<p className='text-lg sm:text-xl text-gray-600'>
+						<p className='text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed px-2'>
 							Бесплатная консультация и расчет стоимости. Заполните форму заявки
 							на отопление
 						</p>
 					</div>
 
-					<Card className='shadow-2xl border-0'>
-						<CardContent className='p-4 sm:p-6 lg:p-8'>
+					<Card className='shadow-xl sm:shadow-2xl border-0 mx-2 sm:mx-0'>
+						<CardContent className='p-4 sm:p-6 lg:p-8 xl:p-10'>
 							{isSubmitted ? (
-								<div className='text-center py-8'>
-									<div className='mx-auto w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mb-6'>
-										<CheckCircle className='h-10 w-10 text-green-600' />
+								<div className='text-center py-6 sm:py-8'>
+									<div className='mx-auto w-16 h-16 sm:w-20 sm:h-20 bg-green-100 rounded-full flex items-center justify-center mb-4 sm:mb-6'>
+										<CheckCircle className='h-8 w-8 sm:h-10 sm:w-10 text-green-600' />
 									</div>
-									<h3 className='text-xl sm:text-2xl font-bold font-heading text-gray-900 mb-2'>
+									<h3 className='text-lg sm:text-xl lg:text-2xl font-bold font-heading text-gray-900 mb-2 break-words'>
 										Спасибо за заявку!
 									</h3>
-									<p className='text-gray-600 text-base sm:text-lg'>
+									<p className='text-gray-600 text-sm sm:text-base lg:text-lg break-words'>
 										Мы свяжемся с вами в ближайшее время для уточнения деталей.
 									</p>
 								</div>
@@ -180,8 +180,11 @@ export default function ContactSection() {
 									className='space-y-4 sm:space-y-6'
 								>
 									<div className='grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6'>
-										<div className='space-y-2'>
-											<Label htmlFor='name' className='text-sm font-medium'>
+										<div className='space-y-2 min-w-0'>
+											<Label
+												htmlFor='name'
+												className='text-sm font-medium block'
+											>
 												Имя *
 											</Label>
 											<Input
@@ -190,19 +193,22 @@ export default function ContactSection() {
 												onChange={e =>
 													handleInputChange('name', e.target.value)
 												}
-												className={`focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all ${
+												className={`w-full focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-sm sm:text-base ${
 													formErrors.name ? 'border-red-500' : ''
 												}`}
 												placeholder='Введите ваше имя'
 											/>
 											{formErrors.name && (
-												<p className='text-red-500 text-sm'>
+												<p className='text-red-500 text-xs sm:text-sm break-words'>
 													{formErrors.name}
 												</p>
 											)}
 										</div>
-										<div className='space-y-2'>
-											<Label htmlFor='phone' className='text-sm font-medium'>
+										<div className='space-y-2 min-w-0'>
+											<Label
+												htmlFor='phone'
+												className='text-sm font-medium block'
+											>
 												Телефон *
 											</Label>
 											<Input
@@ -212,13 +218,13 @@ export default function ContactSection() {
 												onChange={e =>
 													handleInputChange('phone', e.target.value)
 												}
-												className={`focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all ${
+												className={`w-full focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-sm sm:text-base ${
 													formErrors.phone ? 'border-red-500' : ''
 												}`}
 												placeholder='+7 (999) 123-45-67'
 											/>
 											{formErrors.phone && (
-												<p className='text-red-500 text-sm'>
+												<p className='text-red-500 text-xs sm:text-sm break-words'>
 													{formErrors.phone}
 												</p>
 											)}
@@ -226,7 +232,10 @@ export default function ContactSection() {
 									</div>
 
 									<div className='space-y-2'>
-										<Label htmlFor='email' className='text-sm font-medium'>
+										<Label
+											htmlFor='email'
+											className='text-sm font-medium block'
+										>
 											Email *
 										</Label>
 										<Input
@@ -234,19 +243,24 @@ export default function ContactSection() {
 											type='email'
 											value={formData.email}
 											onChange={e => handleInputChange('email', e.target.value)}
-											className={`focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all ${
+											className={`w-full focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-sm sm:text-base ${
 												formErrors.email ? 'border-red-500' : ''
 											}`}
 											placeholder='example@email.com'
 										/>
 										{formErrors.email && (
-											<p className='text-red-500 text-sm'>{formErrors.email}</p>
+											<p className='text-red-500 text-xs sm:text-sm break-words'>
+												{formErrors.email}
+											</p>
 										)}
 									</div>
 
 									<div className='grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6'>
-										<div className='space-y-2'>
-											<Label htmlFor='service' className='text-sm font-medium'>
+										<div className='space-y-2 min-w-0'>
+											<Label
+												htmlFor='service'
+												className='text-sm font-medium block'
+											>
 												Тип услуги
 											</Label>
 											<Select
@@ -254,10 +268,10 @@ export default function ContactSection() {
 													handleInputChange('serviceType', value)
 												}
 											>
-												<SelectTrigger className='focus:ring-2 focus:ring-blue-500 focus:border-transparent'>
+												<SelectTrigger className='w-full focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base'>
 													<SelectValue placeholder='Выберите услугу' />
 												</SelectTrigger>
-												<SelectContent>
+												<SelectContent className='max-w-[calc(100vw-2rem)]'>
 													<SelectItem value='installation'>
 														Установка системы
 													</SelectItem>
@@ -271,8 +285,11 @@ export default function ContactSection() {
 												</SelectContent>
 											</Select>
 										</div>
-										<div className='space-y-2'>
-											<Label htmlFor='date' className='text-sm font-medium'>
+										<div className='space-y-2 min-w-0'>
+											<Label
+												htmlFor='date'
+												className='text-sm font-medium block'
+											>
 												Предпочтительная дата
 											</Label>
 											<Input
@@ -282,13 +299,16 @@ export default function ContactSection() {
 												onChange={e =>
 													handleInputChange('preferredDate', e.target.value)
 												}
-												className='focus:ring-2 focus:ring-blue-500 focus:border-transparent'
+												className='w-full focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base'
 											/>
 										</div>
 									</div>
 
 									<div className='space-y-2'>
-										<Label htmlFor='message' className='text-sm font-medium'>
+										<Label
+											htmlFor='message'
+											className='text-sm font-medium block'
+										>
 											Сообщение
 										</Label>
 										<Textarea
@@ -297,13 +317,13 @@ export default function ContactSection() {
 											onChange={e =>
 												handleInputChange('message', e.target.value)
 											}
-											rows={4}
+											rows={3}
 											placeholder='Расскажите подробнее о ваших потребностях...'
-											className='focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none'
+											className='w-full focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none text-sm sm:text-base'
 										/>
 									</div>
 
-									<div className='space-y-4'>
+									<div className='space-y-3 sm:space-y-4'>
 										<div className='flex items-start space-x-3'>
 											<Checkbox
 												id='privacy'
@@ -316,21 +336,25 @@ export default function ContactSection() {
 												}
 												className='mt-1 flex-shrink-0'
 											/>
-											<div className='space-y-1'>
+											<div className='space-y-1 min-w-0 flex-1'>
 												<Label
 													htmlFor='privacy'
-													className={`text-sm leading-relaxed cursor-pointer ${
+													className={`text-xs sm:text-sm leading-relaxed cursor-pointer block hyphens-auto ${
 														formErrors.privacyConsent
 															? 'text-red-500'
 															: 'text-gray-700'
 													}`}
+													style={{
+														wordBreak: 'break-word',
+														overflowWrap: 'break-word',
+													}}
 												>
 													Я согласен(а) на обработку персональных данных в
 													соответствии с <PrivacyPolicyModal /> и даю согласие
 													на получение информационных сообщений *
 												</Label>
 												{formErrors.privacyConsent && (
-													<p className='text-red-500 text-sm'>
+													<p className='text-red-500 text-xs sm:text-sm break-words'>
 														{formErrors.privacyConsent}
 													</p>
 												)}
@@ -338,22 +362,24 @@ export default function ContactSection() {
 										</div>
 									</div>
 
-									<div className='grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4'>
+									<div className='pt-4'>
 										<Button
 											type='submit'
 											size='lg'
-											className='w-full bg-green-600 hover:bg-green-700 text-base sm:text-lg py-3 sm:py-4 shadow-lg hover:shadow-xl transition-all disabled:opacity-50'
+											className='w-full bg-green-600 hover:bg-green-700 text-sm sm:text-base lg:text-lg py-3 sm:py-4 shadow-lg hover:shadow-xl transition-all disabled:opacity-50'
 											disabled={isEmailSubmitting || !isFormValid}
 										>
 											{isEmailSubmitting ? (
 												<>
-													<div className='animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-3'></div>
-													Отправляем на Email...
+													<div className='animate-spin rounded-full h-4 w-4 sm:h-5 sm:w-5 border-b-2 border-white mr-2 sm:mr-3'></div>
+													<span className='break-words'>
+														Отправляем на Email...
+													</span>
 												</>
 											) : (
 												<>
-													<Mail className='h-5 w-5 mr-2' />
-													Отправить заявку
+													<Mail className='h-4 w-4 sm:h-5 sm:w-5 mr-2 flex-shrink-0' />
+													<span className='break-words'>Отправить заявку</span>
 												</>
 											)}
 										</Button>
